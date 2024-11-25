@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Conversa Fiada</title>
+</head>
+<body>
+<div class="tela-inicial" id="tela-inicial">
+    <div class="titulo-login">
+        <img src="assets/logo.gif" alt="Logo Conversa Fiada" class="logo">
+    </div>
+    <div class="login">
+        <form id="loginForm" onsubmit="telaLogin(event)">
+            <h1>Preencha seus dados e venha bater papo conosco!</h1>
+            <input type="text" name="nome" placeholder="Digite seu nome" required> <br>
+            <input type="submit" value="Entrar">
+        </form>
+    </div>
+</div>
+<div class="batepapo" id="bate-papo">
+    <div class="titulo-papo">
+        <img src="assets/logo2.png" alt="Logo Conversa Fiada" id="logo2">
+        <a href="#">
+            <button id="menu-lateral-abrir">☰</button>
+        </a>
+    </div>
+
+    <!-- Status do Destinatário -->
+    <div id="status-destinatario" style="font-size: 14px; color: #666; margin: 10px; text-align: center;">
+        Conversando com: Todos
+    </div>
+
+    <div class="chat-container" id="chat-container"></div>
+
+    <div class="mensagem-input">
+        <input type="text" id="mensagem" placeholder="Digite sua mensagem..">
+        <button id="enviarMensagemBtn">Enviar</button>
+    </div>
+</div>
+
+<div id="menu-lateral" class="menu-lateral oculto">
+    <div class="menu-lateral-conteudo">
+        <button id="menu-lateral-fechar">X</button>
+        <h2>Escolha um contato para mandar mensagem:</h2>
+        <ul id="lista-participantes">
+            <!-- Participantes e imagens serão adicionados dinamicamente -->
+        </ul>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
